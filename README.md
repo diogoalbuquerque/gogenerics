@@ -1,2 +1,5 @@
 # gogenerics
-A repository containing generics examples in Go.
+
+## Examples to understand how generics works.
+
+Some examples and benchmark test.
