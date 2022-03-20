@@ -2,4 +2,5 @@
 
 ## Examples to understand how generics works.
 
-Some examples and benchmark test.
+1. Some examples and benchmark test;
+2. Writing and using the fuzzing tests structure. 

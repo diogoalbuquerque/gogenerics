@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -29,4 +30,15 @@ func Benchmark_onlyOneString(t *testing.B) {
 
 func Benchmark_onlyOneFloat(t *testing.B) {
 	_ = onlyOne([]float64{1.12, 2.21, 1.12, 1.99, 9.87, 9.87, 12.12})
+}
+
+func Fuzz_same(f *testing.F) {
+	f.Add(1, 2)
+	f.Add(1, 1)
+	f.Add(2, 1)
+	f.Fuzz(func(t *testing.T, data1 int, data2 int) {
+		fmt.Println(data1)
+		fmt.Println(data2)
+		same(data1, data2)
+	})
 }
